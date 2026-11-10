@@ -1,10 +1,14 @@
-let tasks = [
-    { name: "Complete assignment", completed: false }
-];
+let tasks = ["Assignment", "Study", "Exercise"];
 
-function completeTask(index) {
-    tasks[index].completed = true;
-    console.log("Task completed!");
+function deleteTask(index) {
+    if (index >= 0 && index < tasks.length) {
+        tasks.splice(index, 1);
+        console.log("Task deleted successfully!");
+    } else {
+        console.log("Invalid task index!");
+    }
 }
 
-completeTask(0);
+deleteTask(0);
+
+console.log("Remaining tasks:", tasks);
