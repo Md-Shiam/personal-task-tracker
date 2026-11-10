@@ -1,8 +1,10 @@
-let tasks = ["Assignment", "Study", "Exercise"];
+let tasks = [
+    { name: "Complete assignment", completed: false }
+];
 
-function deleteTask(index) {
-    tasks.splice(index, 1);
-    console.log("Task deleted!");
+function completeTask(index) {
+    tasks[index].completed = true;
+    console.log("Task completed!");
 }
 
-deleteTask(0);
+completeTask(0);
